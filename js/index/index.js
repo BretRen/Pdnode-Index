@@ -1,5 +1,18 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
+
+
+const captcha = sessionStorage.getItem('captcha');
+if (captcha === "true") {
+    console.log('Session 中存储的captcha:', captcha);
+} else {
+    console.log('Session 中没有存储captcha数据');
+    window.location.href = "/CAPTCHA.html";
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     const supabaseUrl = "https://lysuqcspfpugxozttfek.supabase.co";
     const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5c3VxY3NwZnB1Z3hvenR0ZmVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQxMjM3NTYsImV4cCI6MjA0OTY5OTc1Nn0.LFafqHaLxS5r3yynw8EydY0VjGlVI7jwr7cr4ovg7P4";

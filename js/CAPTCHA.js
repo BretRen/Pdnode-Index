@@ -18,9 +18,10 @@ const text = document.getElementById("text")
                 if (Notification.permission === "granted") {
                     load.classList.add("notshow");
                     text.textContent = "验证成功！你会在三秒中后重定向！";
+                    sessionStorage.setItem("captcha", "true");
                     text.style.color = "green";
                     setTimeout(() => {
-                        window.location.href = "https://bilibili.com";
+                        window.location.href = "/";
                     }, 3000); // 3000 毫秒（即 3 秒）
 
                     // 如果需要隐藏其他元素可以启用下面代码
@@ -35,10 +36,12 @@ const text = document.getElementById("text")
                     if (permission === "granted") {
                         new Notification("Hello, world!");
                         load.classList.add("notshow");
+                        sessionStorage.setItem("captcha", "true");
                         text.textContent = "验证成功！你会在三秒中后重定向！";
+                        
                         text.style.color = "green";
                         setTimeout(() => {
-                        window.location.href = "https://bilibili.com";
+                        window.location.href = "/";
                     }, 3000); // 3000 毫秒（即 3 秒）
 
                     } else if (Notification.permission === "denied") {
