@@ -21,7 +21,7 @@ const text = document.getElementById("text")
                     sessionStorage.setItem("captcha", "true");
                     text.style.color = "green";
                     setTimeout(() => {
-                        window.location.href = "/";
+                        window.location.href = "./index.html";
                     }, 3000); // 3000 毫秒（即 3 秒）
 
                     // 如果需要隐藏其他元素可以启用下面代码
@@ -41,7 +41,7 @@ const text = document.getElementById("text")
                         
                         text.style.color = "green";
                         setTimeout(() => {
-                        window.location.href = "/";
+                        window.location.href = "./index.html";
                     }, 3000); // 3000 毫秒（即 3 秒）
 
                     } else if (Notification.permission === "denied") {

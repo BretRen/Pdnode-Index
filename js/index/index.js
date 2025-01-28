@@ -7,7 +7,7 @@ if (captcha === "true") {
     console.log('Session 中存储的captcha:', captcha);
 } else {
     console.log('Session 中没有存储captcha数据');
-    window.location.href = "/CAPTCHA.html";
+    window.location.href = "./CAPTCHA.html";
 }
 
 
