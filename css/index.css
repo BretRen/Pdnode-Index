@@ -1,0 +1,89 @@
+/* Reset 样式 */
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 顶部导航栏 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding: 10px 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航项样式 */
+.item {
+    margin: 0 15px;
+    font-size: 1em;
+    color: #333;
+    padding: 10px 10px;
+}
+
+/* 占位元素 */
+.se {
+    flex: 1;
+}
+
+/* 主内容部分 */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 定义两列 */
+    grid-template-rows: auto; /* 行高自适应 */
+    gap: 20px; /* 网格间距 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 子内容样式 */
+main div {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2em;
+    color: #333;
+    border-radius: 10px;
+}
+
+main div span {
+    text-align: center;
+}
+h1,h2 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 5;
+    }
+}
+
+#news-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+.time {
+    color: #848484;
+}
